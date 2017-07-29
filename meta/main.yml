@@ -1,0 +1,14 @@
+galaxy_info:
+  author: DANS-KNAW
+  description: Ansible role that adds a set of test users to an EASY LDAP directory.
+  company: "DANS-KNAW"
+  license: "Apache 2.0"
+  min_ansible_version: 2.3
+  platforms:
+    - name: EL
+  galaxy_tags:
+    # Add tags to classify this module
+  dependencies:
+    - dans.easy-ldap-dir
+
+allow_duplicates: yes
