@@ -16,7 +16,8 @@
 
 ---
 - name: Find out if user has been added before
-  stat: path=/home/vagrant/add-user-{{ uid }}.ldif
+  stat:
+    path: /home/vagrant/add-user-{{ uid }}.ldif
   register: add_script
 
 - name: Generate password-hash 
@@ -25,8 +26,9 @@
   when: add_script.stat.exists == False
 
 - name: Create ldif script to add user {{ uid }}
-  template: src={{ ldif_template }}
-    dest=/home/vagrant/add-user-{{ uid }}.ldif
+  template:
+    src: "{{ ldif_template }}"
+    dest: /home/vagrant/add-user-{{ uid }}.ldif
   when: add_script.stat.exists == False
     
 - name: Execute ldif script
