@@ -62,4 +62,10 @@
     firstname: Data
     surname: TLA
     sword_allowed: "TRUE"
-
+- include: add_user.yml
+  vars:
+    ldif_template: add-user.ldif
+    uid: pantest
+    firstname: Peter
+    surname: PAN
+    sword_allowed: "TRUE"
