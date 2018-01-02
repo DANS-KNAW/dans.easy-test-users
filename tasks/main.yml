@@ -13,56 +13,56 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-- include: add_user.yml
+- import_tasks: add_user.yml
   vars:
     ldif_template: add-user.ldif
     uid: user001
     firstname: User001First
     surname: User001Last
     sword_allowed: "TRUE"
-- include: add_user.yml
+- import_tasks: add_user.yml
   vars:
     ldif_template: add-user.ldif
     uid: user002
     firstname: User002First
     surname: User002Last
     sword_allowed: "FALSE"
-- include: add_user.yml
+- import_tasks: add_user.yml
   vars:
     ldif_template: add-archivist-user.ldif
     uid: archie001
     firstname: Archie
     surname: "Man of Steel"
     sword_allowed: "FALSE"
-- include: add_user.yml
+- import_tasks: add_user.yml
   vars:
     ldif_template: add-archaeologist-user.ldif
     uid: digger001
     firstname: Treasure
     surname: Digger
     sword_allowed: "FALSE"
-- include: add_user.yml
+- import_tasks: add_user.yml
   vars:
     ldif_template: add-user.ldif
     uid: mendeltest
     firstname: Data
     surname: Mendel
     sword_allowed: "TRUE"
-- include: add_user.yml
+- import_tasks: add_user.yml
   vars:
     ldif_template: add-user.ldif
     uid: IPDBSTest
     firstname: Publisher
     surname: PDBS
     sword_allowed: "TRUE"
-- include: add_user.yml
+- import_tasks: add_user.yml
   vars:
     ldif_template: add-user.ldif
     uid: tlatest
     firstname: Data
     surname: TLA
     sword_allowed: "TRUE"
-- include: add_user.yml
+- import_tasks: add_user.yml
   vars:
     ldif_template: add-user.ldif
     uid: pantest
