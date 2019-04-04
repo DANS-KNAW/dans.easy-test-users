@@ -5,7 +5,7 @@ objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: dansUser
 objectClass: easyUser
-cn: {{ firstname }}}
+cn: {{ firstname }}
 sn: {{ surname }}
 uid: {{ uid }}
 dansAcceptConditionsOfUse: TRUE
