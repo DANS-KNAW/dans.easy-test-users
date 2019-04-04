@@ -17,7 +17,7 @@
 ---
 - name: Find out if user has been added before
   stat:
-    path: /home/vagrant/add-user-{{ uid }}.ldif
+    path: '{{ ansible_user_dir }}/add-user-{{ uid }}.ldif'
   register: add_script
 
 - name: Generate password-hash 
@@ -28,11 +28,11 @@
 - name: Create ldif script to add user {{ uid }}
   template:
     src: "{{ ldif_template }}"
-    dest: /home/vagrant/add-user-{{ uid }}.ldif
+    dest: '{{ ansible_user_dir }}/add-user-{{ uid }}.ldif'
   when: add_script.stat.exists == False
     
 - name: Execute ldif script
   command: ldapadd -w {{ easy_test_users_ldapadmin_password }} -D cn=ldapadmin,dc=dans,dc=knaw,dc=nl
-    -f /home/vagrant/add-user-{{ uid }}.ldif
+    -f {{ ansible_user_dir }}/add-user-{{ uid }}.ldif
   when: add_script.stat.exists == False
     
