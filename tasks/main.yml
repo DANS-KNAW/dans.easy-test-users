@@ -18,54 +18,78 @@
     ldif_template: add-user.ldif
     uid: user001
     firstname: User001First
+    initials: "U.F."
     surname: User001Last
+    commonname: "User001Last, U.F. (User001First)"
+    displayname: "User001First User001Last"
     sword_allowed: "TRUE"
 - import_tasks: add_user.yml
   vars:
     ldif_template: add-user.ldif
     uid: user002
     firstname: User002First
+    initials: "U.F."
     surname: User002Last
+    commonname: "User002Last, U.F. (User002First)"
+    displayname: "User002First User002Last"
     sword_allowed: "FALSE"
 - import_tasks: add_user.yml
   vars:
     ldif_template: add-archivist-user.ldif
     uid: archie001
     firstname: Archie
+    initials: "A."
     surname: "Man of Steel"
+    commonname: "Man of Steel, A. (Archie)"
+    displayname: "Archie Man of Steel"
     sword_allowed: "FALSE"
 - import_tasks: add_user.yml
   vars:
     ldif_template: add-archaeologist-user.ldif
     uid: digger001
     firstname: Treasure
+    initials: "T."
     surname: Digger
+    commonname: "Digger, T. (Treasure)"
+    displayname: "Treasure Digger"
     sword_allowed: "FALSE"
 - import_tasks: add_user.yml
   vars:
     ldif_template: add-user.ldif
     uid: mendeltest
     firstname: Data
+    initials: "D."
     surname: Mendel
+    commonname: "Mendel, D. (Data)"
+    displayname: "Data Mendel"
     sword_allowed: "TRUE"
 - import_tasks: add_user.yml
   vars:
     ldif_template: add-user.ldif
     uid: IPDBSTest
     firstname: Publisher
+    initials: "P."
     surname: PDBS
+    commonname: "PDBS, P. (Publisher)"
+    displayname: "Publisher PDBS"
     sword_allowed: "TRUE"
 - import_tasks: add_user.yml
   vars:
     ldif_template: add-user.ldif
     uid: tlatest
     firstname: Data
+    initials: "D."
     surname: TLA
+    commonname: "TLA, D. (Data)"
+    displayname: "Data TLA"
     sword_allowed: "TRUE"
 - import_tasks: add_user.yml
   vars:
     ldif_template: add-user.ldif
     uid: pantest
     firstname: Peter
+    initials: "P."
     surname: PAN
+    commonname: "PAN, P. (Peter)"
+    displayname: "Peter PAN"
     sword_allowed: "TRUE"

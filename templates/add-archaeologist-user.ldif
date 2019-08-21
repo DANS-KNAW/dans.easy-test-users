@@ -5,19 +5,19 @@ objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: dansUser
 objectClass: easyUser
-cn: {{ firstname }}
+cn: {{ commonname }}
 sn: {{ surname }}
 uid: {{ uid }}
 dansAcceptConditionsOfUse: TRUE
 dansNewsletter: FALSE
 dansState: ACTIVE
-displayName: {{ firstname }} {{ surname }}
+displayName: {{ displayname }}
 easyHasConfirmedGeneralConditions: FALSE
 easyLogMyActions: TRUE
 easyRoles: USER
 easyGroups: Archeology
-givenName: EASY
-initials: E A
+givenName: {{ firstname }}
+initials: {{ initials }}
 l: Den Haag
 o: DANS
 mail: {{ easy_test_users_email }}
