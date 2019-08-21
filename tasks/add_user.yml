@@ -35,4 +35,3 @@
   command: ldapadd -w {{ easy_test_users_ldapadmin_password }} -D cn=ldapadmin,dc=dans,dc=knaw,dc=nl
     -f /home/vagrant/add-user-{{ uid }}.ldif
   when: add_script.stat.exists == False
-    
